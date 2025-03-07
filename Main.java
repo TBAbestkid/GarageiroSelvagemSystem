@@ -29,8 +29,7 @@ public class Main {
             } else {
                 System.out.println("Entrada inválida, por favor insira um número.");
                 scanner.next();
-            }
         }
-        scanner.close();
     }
+ }
 }
