@@ -1,7 +1,6 @@
 package view;
 
 import java.util.Scanner;
-import model.Moto;
 import model.Carro;
 import model.VeiculoDesc;
 
@@ -87,7 +86,6 @@ public class CadastroView {
                     
                     case 2:
                     System.out.println("Moto");
-                    Moto moto = new Moto();
                     break;
                     
                     default:
