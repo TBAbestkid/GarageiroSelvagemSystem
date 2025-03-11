@@ -1,12 +1,9 @@
 import controller.CadastroController;
-import java.util.ArrayList;
 import java.util.Scanner;
-import model.Veiculo;
 
 public class Main {
     public static void main(String[] args) {
-        CadastroController cadastroController = new CadastroController();
-        ArrayList<Veiculo> veiculos = new ArrayList<>(); 
+        CadastroController cadastroController = new CadastroController(); 
         Scanner scanner = new Scanner(System.in);
         boolean menuAtivo = true;
         while (menuAtivo) {
