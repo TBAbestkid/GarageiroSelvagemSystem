@@ -9,6 +9,7 @@ import model.Veiculo;
 import model.VeiculoDesc;
 
 public class CadastroView {
+    @SuppressWarnings("resource")
     public List<Veiculo> MenuCadastro() {
         List<Veiculo> listaVeiculos = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
