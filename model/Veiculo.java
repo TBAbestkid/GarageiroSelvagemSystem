@@ -104,5 +104,11 @@ public abstract class Veiculo {
         this.vendido = vendido;
     }
 
+   @Override
+    public String toString() {
+        return "Marca: " + marca + ", Modelo: " + modelo + ", Ano: " + ano + ", Cor: " + cor + 
+            ", KM Rodado: " + kmRodado + ", Valor de Venda: R$" + valorVendaVeiculo + 
+            ", Valor FIPE: R$" + valorFipeVeiculo + ", Vendido: " + (vendido ? "Sim" : "Não");
+    }
     
 }
