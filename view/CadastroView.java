@@ -14,10 +14,10 @@ public class CadastroView {
                             2. - Moto """);
         if (sc.hasNextInt()) {
             int escolhaCadastro = sc.nextInt();
-            sc.nextLine(); // Consumir a nova linha
+            sc.nextLine();
 
             switch (escolhaCadastro) {
-                case 1:
+                case 1 -> {
                     System.out.println("Carro");
                     Carro carro = new Carro();
 
@@ -31,7 +31,7 @@ public class CadastroView {
                     System.out.print("Informe Ano: ");
                     if (sc.hasNextInt()) {
                         carro.setAno(sc.nextInt());
-                        sc.nextLine(); // Consumir a nova linha
+                        sc.nextLine();
                     }
 
                     System.out.print("Informe Cor: ");
@@ -54,10 +54,10 @@ public class CadastroView {
 
                     VeiculoDesc veiculoDesc = new VeiculoDesc();
                     System.out.println("""
-                                        O veículo possui ar condicionado?
-                                        1. - Sim
-                                        2. - Não
-                                        """);
+                                                           O veículo possui ar condicionado?
+                                                           1. - Sim
+                                                           2. - Não
+                                                           """);
                     if (sc.hasNextInt()) {
                         int arCondicionado = sc.nextInt();
                         switch (arCondicionado) {
@@ -68,10 +68,10 @@ public class CadastroView {
                     }
 
                     System.out.println("""
-                                        O veículo possui direção hidráulica?
-                                        1. - Sim
-                                        2. - Não
-                                        """);
+                                                           O veículo possui direção hidráulica?
+                                                           1. - Sim
+                                                           2. - Não
+                                                           """);
                     if (sc.hasNextInt()) {
                         int direcaoHidraulica = sc.nextInt();
                         switch (direcaoHidraulica) {
@@ -80,15 +80,11 @@ public class CadastroView {
                             default -> System.out.println("Valor inválido");
                         }
                     }
-                    break;
+                }
 
-                case 2:
-                    System.out.println("Moto");
-                    break;
+                case 2 -> System.out.println("Moto");
 
-                default:
-                    System.out.println("Opção inválida");
-                    break;
+                default -> System.out.println("Opção inválida");
             }
         } else {
             System.out.println("Entrada inválida, por favor insira um número.");
