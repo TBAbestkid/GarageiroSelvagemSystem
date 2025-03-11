@@ -162,17 +162,46 @@ public class CadastroView {
                     }
                     VeiculoDesc veiculoDesc = new VeiculoDesc();
 
-                    System.out.println("Sua placa é mercosul ou antiga?");
-                    if (sc.hasNextInt()) {
-                        int placa = sc.nextInt();
-                        sc.nextLine();
-                        switch (placa) {
-                            case 1 -> veiculoDesc.setPlaca("Mercosul");
-                            case 2 -> veiculoDesc.setPlaca("Antiga");
-                            default -> System.out.println("Valor inválido");
+                    System.out.println("""
+                        Sua placa é mercosul ou antiga?
+                        1. - Mercosul
+                        2. - Antiga
+                        """);
+                if (sc.hasNextInt()) {
+                    int placa = sc.nextInt();
+                    sc.nextLine();
+                    switch (placa) {
+                        case 1 -> {
+                            boolean placaValida = false;
+                            while (!placaValida) {
+                                System.out.println("Informe a placa do veículo: ");
+                                veiculoDesc.setPlaca(sc.nextLine());
+                                Integer validaPlacaMercosul = veiculoDesc.validarPlaca();
+                                if (validaPlacaMercosul == 0) {
+                                    System.out.println("Placa inválida. Tente novamente.");
+                                    System.out.println(placa);
+                                } else {
+                                    placaValida = true;
+                                }
+                            }
                         }
+                        case 2 -> {
+                            boolean placaValida = false;
+                            while (!placaValida) {
+                                System.out.println("Informe a placa do veículo: ");
+                                veiculoDesc.setPlaca(sc.nextLine());
+                                Integer validaPlacaAntiga = veiculoDesc.validarPlaca();
+                                if (validaPlacaAntiga == 0) {
+                                    System.out.println("Placa inválida. Tente novamente.");
+                                    System.out.println(placa);
+                                } else {
+                                    placaValida = true;
+                                }
+                            }
+                        }
+                        default -> System.out.println("Valor inválido");
                     }
-
+                }
                     moto.setDescOpcional(veiculoDesc);
                     listaVeiculos.add(moto);
                 }
