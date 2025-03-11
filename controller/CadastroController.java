@@ -4,7 +4,7 @@ import view.CadastroView;
 
 public class CadastroController {
     
-    private CadastroView cadastroView;
+    private final CadastroView cadastroView;
 
     public CadastroController() {
         this.cadastroView = new CadastroView();
