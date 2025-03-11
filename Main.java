@@ -1,7 +1,9 @@
 import controller.CadastroController;
 import controller.ListController;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import model.Veiculo;
 
 public class Main {
     public static void main(String[] args) {
