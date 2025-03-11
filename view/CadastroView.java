@@ -14,10 +14,11 @@ public class CadastroView {
         List<Veiculo> listaVeiculos = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         System.out.println("""
-                            Cadastrar veículo
-                            =================
-                            1. - Carro
-                            2. - Moto """);
+                Cadastrar veículo
+                =================
+                1. - Carro
+                2. - Moto
+                3. - Sair """);
         if (sc.hasNextInt()) {
             int escolhaCadastro = sc.nextInt();
             sc.nextLine();
@@ -60,10 +61,10 @@ public class CadastroView {
 
                     VeiculoDesc veiculoDesc = new VeiculoDesc();
                     System.out.println("""
-                                                           O veículo possui ar condicionado?
-                                                           1. - Sim
-                                                           2. - Não
-                                                           """);
+                            O veículo possui ar condicionado?
+                            1. - Sim
+                            2. - Não
+                            """);
                     if (sc.hasNextInt()) {
                         int arCondicionado = sc.nextInt();
                         switch (arCondicionado) {
@@ -74,10 +75,10 @@ public class CadastroView {
                     }
 
                     System.out.println("""
-                                                           O veículo possui direção hidráulica?
-                                                           1. - Sim
-                                                           2. - Não
-                                                           """);
+                            O veículo possui direção hidráulica?
+                            1. - Sim
+                            2. - Não
+                            """);
                     if (sc.hasNextInt()) {
                         int direcaoHidraulica = sc.nextInt();
                         switch (direcaoHidraulica) {
@@ -88,52 +89,52 @@ public class CadastroView {
                     }
 
                     System.out.println("""
-                                                              Sua placa é mercosul ou antiga?
-                                                              1. - Mercosul
-                                                              2. - Antiga
-                                                              """);
+                            Sua placa é mercosul ou antiga?
+                            1. - Mercosul
+                            2. - Antiga
+                            """);
                     if (sc.hasNextInt()) {
-                    int placa = sc.nextInt();
-                    sc.nextLine();
-                    switch (placa) {
-                        case 1 -> {
-                            boolean placaValida = false;
-                            while (!placaValida) {
-                                System.out.println("Informe a placa do veículo: ");
-                                veiculoDesc.setPlaca(sc.nextLine());
-                                Integer validaPlacaMercosul = veiculoDesc.validarPlaca();
-                                if (validaPlacaMercosul == 0) {
-                                    System.out.println("Placa inválida. Tente novamente.");
-                                    System.out.println(placa);
-                                } else {
-                                    placaValida = true; 
+                        int placa = sc.nextInt();
+                        sc.nextLine();
+                        switch (placa) {
+                            case 1 -> {
+                                boolean placaValida = false;
+                                while (!placaValida) {
+                                    System.out.println("Informe a placa do veículo: ");
+                                    veiculoDesc.setPlaca(sc.nextLine());
+                                    Integer validaPlacaMercosul = veiculoDesc.validarPlaca();
+                                    if (validaPlacaMercosul == 0) {
+                                        System.out.println("Placa inválida. Tente novamente.");
+                                        System.out.println(placa);
+                                    } else {
+                                        placaValida = true;
+                                    }
                                 }
                             }
-                        }
-                        case 2 -> {
-                            boolean placaValida = false;
-                            while (!placaValida) {
-                                System.out.println("Informe a placa do veículo: ");
-                                veiculoDesc.setPlaca(sc.nextLine());
-                                Integer validaPlacaAntiga = veiculoDesc.validarPlaca();
-                                if (validaPlacaAntiga == 0) {
-                                    System.out.println("Placa inválida. Tente novamente.");
-                                    System.out.println(placa);
-                                } else {
-                                    placaValida = true; 
+                            case 2 -> {
+                                boolean placaValida = false;
+                                while (!placaValida) {
+                                    System.out.println("Informe a placa do veículo: ");
+                                    veiculoDesc.setPlaca(sc.nextLine());
+                                    Integer validaPlacaAntiga = veiculoDesc.validarPlaca();
+                                    if (validaPlacaAntiga == 0) {
+                                        System.out.println("Placa inválida. Tente novamente.");
+                                        System.out.println(placa);
+                                    } else {
+                                        placaValida = true;
+                                    }
                                 }
                             }
+                            default -> System.out.println("Valor inválido");
                         }
-                        default -> System.out.println("Valor inválido");
                     }
-                }
                     carro.setDescOpcional(veiculoDesc);
-                    listaVeiculos.add(carro); 
+                    listaVeiculos.add(carro);
                 }
 
                 case 2 -> {
                     System.out.println("Moto");
-                    Moto moto = new Moto(); 
+                    Moto moto = new Moto();
 
                     System.out.println("Para iniciar o cadastro");
                     System.out.println("Informe Marca: ");
@@ -160,13 +161,13 @@ public class CadastroView {
                         moto.setValorFipeVeiculo(sc.nextDouble());
                     }
                     VeiculoDesc veiculoDesc = new VeiculoDesc();
-                    // Placa
+
                     System.out.println("Sua placa é mercosul ou antiga?");
                     if (sc.hasNextInt()) {
                         int placa = sc.nextInt();
                         sc.nextLine();
                         switch (placa) {
-                            case 1 -> veiculoDesc.setPlaca("Mercosul"); 
+                            case 1 -> veiculoDesc.setPlaca("Mercosul");
                             case 2 -> veiculoDesc.setPlaca("Antiga");
                             default -> System.out.println("Valor inválido");
                         }
@@ -175,17 +176,15 @@ public class CadastroView {
                     moto.setDescOpcional(veiculoDesc);
                     listaVeiculos.add(moto);
                 }
-
+                case 3 -> {
+                    break;
+                }
                 default -> System.out.println("Opção inválida");
             }
         } else {
             System.out.println("Entrada inválida, por favor insira um número.");
             sc.next();
         }
-        System.out.println("\nVeículos cadastrados: ");
-        for (Veiculo veiculo : listaVeiculos) {
-            System.out.println(veiculo);
+        return listaVeiculos;
     }
-     return listaVeiculos;
-}
 }
