@@ -28,32 +28,20 @@ public class Main {
             if (scanner.hasNextInt()) {
                 int escolha = scanner.nextInt();
                 switch (escolha) {
-                    case 1:
+                    case 1 -> cadastroController.MenuCadastro();
 
-                        cadastroController.MenuCadastro();
-                        break;
+                    case 2 -> System.out.println("Edição");
 
-                    case 2:
-                        System.out.println("Edição");
-                        break;
-
-                    case 3:
-                        System.out.println("Exclusão");
-                        break;
+                    case 3 -> System.out.println("Exclusão");
                     
-                    case 4:
-                    
-                        listController.MenuList();
-                        break;
+                    case 4 -> listController.MenuList();
 
-                    case 5:
+                    case 5 -> {
                         System.out.println("Saindo do sistema...");
                         menuAtivo = false;
-                        break;
+                    }
 
-                    default:
-                        System.out.println("Opção inválida");
-                        break;
+                    default -> System.out.println("Opção inválida");
                 }
             } else {
                 System.out.println("Entrada inválida, por favor insira um número.");
