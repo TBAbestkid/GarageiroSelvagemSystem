@@ -9,7 +9,7 @@ import model.Veiculo;
 import model.VeiculoDesc;
 
 public class CadastroView {
-    public void MenuCadastro() {
+    public List<Veiculo> MenuCadastro() {
         List<Veiculo> listaVeiculos = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         System.out.println("""
@@ -183,7 +183,8 @@ public class CadastroView {
         }
         System.out.println("\nVeículos cadastrados: ");
         for (Veiculo veiculo : listaVeiculos) {
-            System.out.println(veiculo); 
+            System.out.println(veiculo);
     }
+     return listaVeiculos;
 }
 }
