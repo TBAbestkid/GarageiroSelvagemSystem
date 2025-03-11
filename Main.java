@@ -6,6 +6,7 @@ import java.util.Scanner;
 import model.Veiculo;
 
 public class Main {
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
        List<List<Veiculo>> listaDeListas = new ArrayList<>();
        
