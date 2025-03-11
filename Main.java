@@ -7,8 +7,8 @@ import model.Veiculo;
 
 public class Main {
     public static void main(String[] args) {
-        List<Veiculo> listaVeiculos = new ArrayList<>();
-
+       List<List<Veiculo>> listaDeListas = new ArrayList<>();
+       
         CadastroController cadastroController = new CadastroController(); 
         ListController listController = new ListController();
 
