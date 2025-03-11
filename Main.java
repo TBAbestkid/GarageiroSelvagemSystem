@@ -1,9 +1,15 @@
 import controller.CadastroController;
+import controller.ListController;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        List<Veiculo> listaVeiculos = new ArrayList<>();
+
         CadastroController cadastroController = new CadastroController(); 
+        ListController listController = new ListController();
+
         Scanner scanner = new Scanner(System.in);
         boolean menuAtivo = true;
         while (menuAtivo) {
@@ -25,23 +31,21 @@ public class Main {
                         break;
 
                     case 2:
-                        System.out.println("");
-                        break;
-                
-                    case 3:
                         System.out.println("Edição");
                         break;
 
-                    case 4:
+                    case 3:
                         System.out.println("Exclusão");
                         break;
                     
-                    case 5:
-                        System.out.println("Listagem");
+                    case 4:
+                    
+                        listController.MenuList();
                         break;
 
-                    case 6:
-                        System.out.println("Sair");
+                    case 5:
+                        System.out.println("Saindo do sistema...");
+                        menuAtivo = false;
                         break;
 
                     default:
