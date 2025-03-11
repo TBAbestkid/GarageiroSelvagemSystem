@@ -6,7 +6,7 @@ public class ListController {
     
     private final ListView listView;
 
-    public CadastroController() {
+    public ListController() {
         this.listView = new ListView();
     }
 
