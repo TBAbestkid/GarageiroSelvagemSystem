@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
        List<List<Veiculo>> listaDeListas = new ArrayList<>();
         CadastroController cadastroController = new CadastroController(); 
-        ListController listController = new ListController();
+        ListController listController = new ListController(listaDeListas);
 
         Scanner scanner = new Scanner(System.in);
         boolean menuAtivo = true; 
@@ -37,15 +37,7 @@ public class Main {
                     case 3 -> System.out.println("Exclusão");
                     
                     case 4 -> {
-                    // vamos passar para listController uma lista de listas (listaDeListas) e lá fazemos o filtro
-                    //     for (List<Veiculo> veiculo : listaDeListas) {
-                    //         for (Veiculo lista : veiculo) {
-                    //             for(Veiculo veiculoDistinto : veiculo)
-                    //             {
-                    //                 System.out.println(veiculoDistinto);
-                    //             }
-                    //         }
-                    // }
+                        listController.MenuList(); 
                     }
                     case 5 -> {
                         System.out.println("Saindo do sistema...");
