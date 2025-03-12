@@ -9,12 +9,11 @@ public class Main {
     @SuppressWarnings({ "unused", "resource" })
     public static void main(String[] args) {
        List<List<Veiculo>> listaDeListas = new ArrayList<>();
-       
         CadastroController cadastroController = new CadastroController(); 
         ListController listController = new ListController();
 
         Scanner scanner = new Scanner(System.in);
-        boolean menuAtivo = true;
+        boolean menuAtivo = true; 
         while (menuAtivo) {
             System.out.println("""
                                 Menu
@@ -28,14 +27,26 @@ public class Main {
             if (scanner.hasNextInt()) {
                 int escolha = scanner.nextInt();
                 switch (escolha) {
-                    case 1 -> cadastroController.MenuCadastro();
+                    case 1 -> {
+                        List<Veiculo> cadastros = cadastroController.MenuCadastro();
+                        listaDeListas.add(cadastros);
+                    } 
 
                     case 2 -> System.out.println("Edição");
 
                     case 3 -> System.out.println("Exclusão");
                     
-                    case 4 -> listController.MenuList();
-
+                    case 4 -> {
+                    // vamos passar para listController uma lista de listas (listaDeListas) e lá fazemos o filtro
+                    //     for (List<Veiculo> veiculo : listaDeListas) {
+                    //         for (Veiculo lista : veiculo) {
+                    //             for(Veiculo veiculoDistinto : veiculo)
+                    //             {
+                    //                 System.out.println(veiculoDistinto);
+                    //             }
+                    //         }
+                    // }
+                    }
                     case 5 -> {
                         System.out.println("Saindo do sistema...");
                         menuAtivo = false;
