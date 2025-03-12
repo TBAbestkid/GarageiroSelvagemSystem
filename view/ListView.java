@@ -1,12 +1,7 @@
 package view;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
-import model.Carro;
-import model.Moto;
 import model.Veiculo;
-import model.VeiculoDesc;
 
 public class ListView {
 
