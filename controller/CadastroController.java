@@ -1,5 +1,7 @@
 package controller;
 
+import java.util.List;
+import model.Veiculo;
 import view.CadastroView;
 
 public class CadastroController {
@@ -10,8 +12,8 @@ public class CadastroController {
         this.cadastroView = new CadastroView();
     }
 
-    public void MenuCadastro()
+    public List<Veiculo> MenuCadastro()
     {
-        cadastroView.MenuCadastro();
+         return cadastroView.MenuCadastro();
     }
 }
