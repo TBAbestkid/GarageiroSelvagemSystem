@@ -39,6 +39,18 @@ public class CadastroView {
                     if (sc.hasNextInt()) {
                         carro.setAno(sc.nextInt());
                         sc.nextLine();
+                    } else {
+                        System.out.println("Resposta inválida, insira novamente");
+                        while(true){
+                            if (sc.hasNextInt()) {
+                                carro.setAno(sc.nextInt());
+                                sc.nextLine();
+                                break;
+                            } else {
+                                System.out.println("Entrada inválida. Por favor, insira um número inteiro.");
+                                sc.next();
+                            }
+                        }
                     }
 
                     System.out.print("Informe Cor: ");
@@ -47,16 +59,51 @@ public class CadastroView {
                     System.out.println("Informe quilometragem rodado: ");
                     if (sc.hasNextDouble()) {
                         carro.setKmRodado(sc.nextDouble());
+                    } else {
+                        System.out.println("Resposta inválida, insira novamente");
+                        while(true){
+                            if (sc.hasNextDouble()) {
+                                carro.setKmRodado(sc.nextDouble());
+                                sc.nextLine();
+                                break;
+                            } else {
+                                System.out.println("Entrada inválida. Por favor, insira um número inteiro.");
+                                sc.next();
+                            }
+                        }
                     }
 
                     System.out.print("Informe valor de venda do veículo: ");
                     if (sc.hasNextDouble()) {
                         carro.setValorVendaVeiculo(sc.nextDouble());
+                    } else {
+                        System.out.println("Resposta inválida, insira novamente");
+                        while(true){
+                            if (sc.hasNextDouble()) {
+                                carro.setValorVendaVeiculo(sc.nextDouble());
+                                sc.nextLine();
+                                break;
+                            } else {
+                                System.out.println("Entrada inválida. Por favor, insira um número inteiro.");
+                                sc.next();
+                            }
+                        }
                     }
-
                     System.out.print("Informe valor fipe de veículo: ");
                     if (sc.hasNextDouble()) {
                         carro.setValorFipeVeiculo(sc.nextDouble());
+                    } else {
+                        System.out.println("Resposta inválida, insira novamente");
+                        while(true){
+                            if (sc.hasNextDouble()) {
+                                carro.setValorFipeVeiculo(sc.nextDouble());
+                                sc.nextLine();
+                                break;
+                            } else {
+                                System.out.println("Entrada inválida. Por favor, insira um número inteiro.");
+                                sc.next();
+                            }
+                        }
                     }
 
                     VeiculoDesc veiculoDesc = new VeiculoDesc();
@@ -71,6 +118,22 @@ public class CadastroView {
                             case 1 -> veiculoDesc.setArCondicionado(true);
                             case 2 -> veiculoDesc.setArCondicionado(false);
                             default -> System.out.println("Valor inválido");
+                        }
+                    } else {
+                        System.out.println("Resposta inválida, insira novamente");
+                        while(true){
+                            if (sc.hasNextInt()) {
+                                int arCondicionado = sc.nextInt();
+                                switch (arCondicionado) {
+                                    case 1 -> veiculoDesc.setArCondicionado(true);
+                                    case 2 -> veiculoDesc.setArCondicionado(false);
+                                    default -> System.out.println("Valor inválido");
+                                }
+                                break;
+                            } else {
+                                System.out.println("Entrada inválida. Por favor, insira uma das opções.");
+                                sc.next();
+                            }
                         }
                     }
 
@@ -145,20 +208,71 @@ public class CadastroView {
                     if (sc.hasNextInt()) {
                         moto.setAno(sc.nextInt());
                         sc.nextLine();
+                    } else {
+                        System.out.println("Resposta inválida, insira novamente");
+                        while(true){
+                            if (sc.hasNextInt()) {
+                                moto.setAno(sc.nextInt());
+                                sc.nextLine();
+                                break;
+                            } else {
+                                System.out.println("Entrada inválida. Por favor, insira um número inteiro.");
+                                sc.next();
+                            }
+                        }
                     }
+
                     System.out.print("Informe Cor: ");
                     moto.setCor(sc.nextLine());
+
                     System.out.println("Informe quilometragem rodado: ");
                     if (sc.hasNextDouble()) {
                         moto.setKmRodado(sc.nextDouble());
+                    } else {
+                        System.out.println("Resposta inválida, insira novamente");
+                        while(true){
+                            if (sc.hasNextDouble()) {
+                                moto.setKmRodado(sc.nextDouble());
+                                sc.nextLine();
+                                break;
+                            } else {
+                                System.out.println("Entrada inválida. Por favor, insira um número inteiro.");
+                                sc.next();
+                            }
+                        }
                     }
+
                     System.out.print("Informe valor de venda do veículo: ");
                     if (sc.hasNextDouble()) {
                         moto.setValorVendaVeiculo(sc.nextDouble());
+                    } else {
+                        System.out.println("Resposta inválida, insira novamente");
+                        while(true){
+                            if (sc.hasNextDouble()) {
+                                moto.setValorVendaVeiculo(sc.nextDouble());
+                                sc.nextLine();
+                                break;
+                            } else {
+                                System.out.println("Entrada inválida. Por favor, insira um número inteiro.");
+                                sc.next();
+                            }
+                        }
                     }
                     System.out.print("Informe valor fipe de veículo: ");
                     if (sc.hasNextDouble()) {
                         moto.setValorFipeVeiculo(sc.nextDouble());
+                    } else {
+                        System.out.println("Resposta inválida, insira novamente");
+                        while(true){
+                            if (sc.hasNextDouble()) {
+                                moto.setValorFipeVeiculo(sc.nextDouble());
+                                sc.nextLine();
+                                break;
+                            } else {
+                                System.out.println("Entrada inválida. Por favor, insira um número inteiro.");
+                                sc.next();
+                            }
+                        }
                     }
                     VeiculoDesc veiculoDesc = new VeiculoDesc();
 
