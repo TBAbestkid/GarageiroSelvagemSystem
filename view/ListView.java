@@ -176,7 +176,7 @@ public class ListView {
                                             for (Veiculo veiculo : veiculoLista) {
                                                 if (veiculo instanceof Moto) {
                                                     Moto moto = (Moto) veiculo;
-                                                    if (carro.getMarca().equalsIgnoreCase(marcaMoto)) {
+                                                    if (moto.getMarca().equalsIgnoreCase(marcaMoto)) {
                                                         System.out.println(moto);
                                                     }
                                                 } 
