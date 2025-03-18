@@ -3,7 +3,6 @@ package view;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
 import model.Carro;
 import model.Moto;
 import model.Veiculo;
@@ -11,6 +10,7 @@ import model.Veiculo;
 public class DeleteView {
 
     public List<List<Veiculo>> MenuDelete(List<List<Veiculo>> listaDeListas) {
+        @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);
     
         while (true) {
