@@ -4,11 +4,7 @@ import controller.ListController;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
-import model.Carro;
-import model.Moto;
 import model.Veiculo;
-import model.VeiculoDesc;
 
 public class Main {
     @SuppressWarnings({ "unused", "resource" })
@@ -17,18 +13,6 @@ public class Main {
         CadastroController cadastroController = new CadastroController(); 
         ListController listController = new ListController(listaDeListas);
         DeleteController deleteController = new DeleteController();
-
-        List<Veiculo> listaCarros = new ArrayList<>();
-        listaCarros.add(new Carro("Toyota", "Corolla", 2019, "Prata", 50000.0, 70000.0, 68000.0, new VeiculoDesc(true, true, "ABC-1234"), false));
-        listaCarros.add(new Carro("Honda", "Civic", 2020, "Preto", 30000.0, 80000.0, 75000.0, new VeiculoDesc(true, false, "DEF-5678"), false));
-
-        List<Veiculo> listaMotos = new ArrayList<>();
-        listaMotos.add(new Moto("Yamaha", "MT-07", 2021, "Azul", 12000.0, 30000.0, 28000.0, new VeiculoDesc(false, false, "GHI-9012"), false));
-        listaMotos.add(new Moto("Kawasaki", "Ninja", 2018, "Verde", 15000.0, 35000.0, 33000.0, new VeiculoDesc(false, false, "JKL-3456"), false));
-
-        // Adiciona as listas criadas à lista de listas principal
-        listaDeListas.add(listaCarros);
-        listaDeListas.add(listaMotos);
 
         Scanner scanner = new Scanner(System.in);
         boolean menuAtivo = true; 
