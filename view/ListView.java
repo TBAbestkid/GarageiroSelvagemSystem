@@ -1,12 +1,10 @@
 package view;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import model.Carro;
 import model.Moto;
 import model.Veiculo;
-import model.VeiculoDesc;
 
 
 public class ListView {
@@ -251,8 +249,6 @@ public class ListView {
                                             for (Veiculo veiculo : veiculoLista) {
                                                 if (veiculo.getMarca().equals(marcaVeiculo)) {
                                                     System.out.println(veiculo);
-                                                } else {
-                                                    System.out.println("Nenhum veículo encontrado com a marca " + marcaVeiculo);
                                                 }
                                             }
                                         }
@@ -267,8 +263,6 @@ public class ListView {
                                             for (Veiculo veiculo : veiculoLista) {
                                                 if (veiculo.getAno() == anoVeiculo) {
                                                     System.out.println(veiculo);
-                                                } else {
-                                                    System.out.println("Nenhum veículo encontrado com o ano " + anoVeiculo);
                                                 }
                                             }
                                         }
