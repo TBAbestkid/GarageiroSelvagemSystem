@@ -11,6 +11,7 @@ public class ListView {
 
     public void MenuList(List<List<Veiculo>> listaDeListas) { 
         
+        @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);
         System.out.println("""
                 Buscar por veículo
