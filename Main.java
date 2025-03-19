@@ -1,6 +1,7 @@
 import controller.CadastroController;
 import controller.DeleteController;
 import controller.ListController;
+import controller.SellingController;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -13,6 +14,7 @@ public class Main {
         CadastroController cadastroController = new CadastroController(); 
         ListController listController = new ListController(listaDeListas);
         DeleteController deleteController = new DeleteController();
+        SellingController sellingController = new SellingController();
 
         Scanner scanner = new Scanner(System.in);
         boolean menuAtivo = true; 
@@ -24,7 +26,8 @@ public class Main {
                                 2. - Edição
                                 3. - Exclusão
                                 4. - Listagem
-                                5. - Sair
+                                5. - Vender
+                                6. - Sair
                                 """);
             if (scanner.hasNextInt()) {
                 int escolha = scanner.nextInt();
@@ -43,7 +46,11 @@ public class Main {
                     case 4 -> {
                         listController.MenuList(); 
                     }
-                    case 5 -> {
+                    case 5 ->{
+                        listaDeListas = sellingController.MenuSell(listaDeListas);
+
+                    }
+                    case 6 -> {
                         System.out.println("Saindo do sistema...");
                         menuAtivo = false;
                     }
