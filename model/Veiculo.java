@@ -1,5 +1,6 @@
 package model;
 
+// Classe abstrata que define um veículo genérico
 public abstract class Veiculo {
     private String marca;
     private String modelo;
@@ -8,15 +9,16 @@ public abstract class Veiculo {
     private double kmRodado;
     private double valorVendaVeiculo;
     private double valorFipeVeiculo;
+
+    // Agregação: Veiculo possui um VeiculoDesc, mas não o cria diretamente
     private VeiculoDesc descOpcional;
     private boolean vendido = false;
 
-
-
     public Veiculo() {
     }
-    
-    public Veiculo(String marca, String modelo, int ano, String cor, double kmRodado, double valorVendaVeiculo, double valorFipeVeiculo, VeiculoDesc descOpcional, boolean vendido) {
+
+    public Veiculo(String marca, String modelo, int ano, String cor, double kmRodado, double valorVendaVeiculo,
+            double valorFipeVeiculo, VeiculoDesc descOpcional, boolean vendido) {
         this.marca = marca;
         this.modelo = modelo;
         this.ano = ano;
@@ -27,6 +29,8 @@ public abstract class Veiculo {
         this.descOpcional = descOpcional;
         this.vendido = vendido;
     }
+
+    // Métodos Getters e Setters para acessar e modificar os atributos
 
     public String getMarca() {
         return this.marca;
@@ -104,11 +108,11 @@ public abstract class Veiculo {
         this.vendido = vendido;
     }
 
-   @Override
+    @Override
     public String toString() {
-        return "Marca: " + marca + ", Modelo: " + modelo + ", Ano: " + ano + ", Cor: " + cor + 
-            ", KM Rodado: " + kmRodado + ", Valor de Venda: R$" + valorVendaVeiculo + 
-            ", Valor FIPE: R$" + valorFipeVeiculo + ", Vendido: " + (vendido ? "Sim" : "Não");
+        return "Marca: " + marca + ", Modelo: " + modelo + ", Ano: " + ano + ", Cor: " + cor +
+                ", KM Rodado: " + kmRodado + ", Valor de Venda: R$" + valorVendaVeiculo +
+                ", Valor FIPE: R$" + valorFipeVeiculo + ", Vendido: " + (vendido ? "Sim" : "Não");
     }
-    
+
 }

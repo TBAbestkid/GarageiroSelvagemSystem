@@ -3,22 +3,20 @@ package model;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+// Classe que representa detalhes opcionais de um veículo
 public class VeiculoDesc {
     private boolean arCondicionado;
     private boolean direcaoHidraulica;
     private String placa;
-
 
     public VeiculoDesc(boolean arCondicionado, boolean direcaoHidraulica, String placa) {
         this.arCondicionado = arCondicionado;
         this.direcaoHidraulica = direcaoHidraulica;
         this.placa = placa;
     }
-    
 
     public VeiculoDesc() {
     }
-    
 
     public boolean isArCondicionado() {
         return this.arCondicionado;
@@ -52,6 +50,8 @@ public class VeiculoDesc {
         this.placa = placa;
 
     }
+
+    // Método que valida o formato da placa (Mercosul ou padrão antigo)
     public Integer validarPlaca() {
 
         String mercosulPattern = "^[A-Z]{3}[0-9][A-Z][0-9]{2}$";
@@ -75,9 +75,9 @@ public class VeiculoDesc {
 
     @Override
     public String toString() {
-        return "Ar Condicionado: " + (arCondicionado ? "Sim" : "Não") + 
-            ", Direção Hidráulica: " + (direcaoHidraulica ? "Sim" : "Não") + 
-            ", Placa: " + placa;
+        return "Ar Condicionado: " + (arCondicionado ? "Sim" : "Não") +
+                ", Direção Hidráulica: " + (direcaoHidraulica ? "Sim" : "Não") +
+                ", Placa: " + placa;
     }
-    
+
 }
