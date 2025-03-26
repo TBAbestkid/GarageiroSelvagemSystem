@@ -29,7 +29,9 @@ A estrutura de pastas do projeto segue uma organização padrão para aplicaçõ
 GarageiroSelvagemSystem/
 ├── controller/
 │   ├── CadastroController.java
-│   └── ListController.java
+│   ├── DeleteController.java
+│   ├── ListController.java
+│   └── SellingController.java
 ├── model/
 │   ├── Carro.java
 │   ├── Moto.java
@@ -37,7 +39,9 @@ GarageiroSelvagemSystem/
 │   └── VeiculoDesc.java
 ├── view/
 │   ├── CadastroView.java
-│   └── ListView.java
+│   ├── DeleteView.java
+│   ├── ListView.java
+│   └── SellView.java
 └── Main.java
 
 ```
@@ -48,11 +52,6 @@ Para executar a aplicação, siga os passos abaixo:
 1.  Certifique-se de ter o Java Development Kit (JDK) instalado em seu computador.
 2.  Compile os arquivos `.java` utilizando o compilador `javac`.
 3.  Execute a classe `Main` utilizando o interpretador `java`.
-
-## Melhorias Futuras
-
-* Implementar a funcionalidade de edição e exclusão de veículos.
-* Adicionar validações de entrada para garantir a integridade dos dados.
 
 ## Conclusão
 
