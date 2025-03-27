@@ -1,5 +1,6 @@
 import controller.CadastroController;
 import controller.DeleteController;
+import controller.EdicaoController;
 import controller.ListController;
 import controller.SellingController;
 import java.util.ArrayList;
@@ -15,6 +16,7 @@ public class Main {
         ListController listController = new ListController(listaDeListas);
         DeleteController deleteController = new DeleteController();
         SellingController sellingController = new SellingController();
+        EdicaoController edicaoController = new EdicaoController();
 
         Scanner scanner = new Scanner(System.in);
         boolean menuAtivo = true; 
@@ -37,7 +39,9 @@ public class Main {
                         listaDeListas.add(cadastros);
                     } 
 
-                    case 2 -> System.out.println("Edição");
+                    case 2 -> {
+                        listaDeListas = edicaoController.MenuEdicao(listaDeListas);
+                    }
 
                     case 3 -> {
                         listaDeListas = deleteController.MenuDelete(listaDeListas);

@@ -166,7 +166,7 @@ public class CadastroView {
                                     case 2 -> {
                                         boolean placaValida = false;
                                         while (!placaValida) {
-                                            System.out.println("Formato: ABC1234");
+                                            System.out.println("Formato: ABC-1234");
                                             System.out.print("Informe a placa do veículo: ");
                                             veiculoDesc.setPlaca(sc.nextLine());
                                             Integer validaPlacaAntiga = veiculoDesc.validarPlaca();
