@@ -53,7 +53,7 @@ public class EdicaoView {
     
                         for (int j = 0; j < veiculoLista.size(); j++) {
                             Veiculo veiculo = veiculoLista.get(j);
-                            if (veiculo instanceof Carro) {
+                            if (veiculo instanceof Carro && !veiculo.getVendido()) {
                                 System.out.println(count + ". - " + veiculo.getModelo());
                                 listaIndicesSublistas.add(i);
                                 listaIndicesVeiculos.add(j);
@@ -266,7 +266,7 @@ public class EdicaoView {
     
                         for (int j = 0; j < veiculoLista.size(); j++) {
                             Veiculo veiculo = veiculoLista.get(j);
-                            if (veiculo instanceof Moto) {
+                            if (veiculo instanceof Moto && !veiculo.getVendido()) {
                                 System.out.println(count + ". - " + veiculo.getModelo());
                                 listaIndicesSublistas.add(i);
                                 listaIndicesVeiculos.add(j);
